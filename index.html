@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkHub - Hackathons and Contests</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <h1 class="spark-hub-logo-splash"><span class="spark-text-splash">Spark</span><span class="hub-text-splash">Hub</span></h1>
+    </div>
+
+    <!-- Main Content Container -->
+    <div id="main-content" style="display: none;">
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <i class="fas fa-bolt logo-icon"></i> <!-- Font Awesome Regular (Hollow) Bolt Icon -->
+                <span class="logo-text"><span class="spark-text">Spark</span><span class="hub-text">Hub</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-target="hackathons-page">Hackathons</a></li>
+                <li><a href="#" class="nav-link" data-target="resources">Resources</a></li>
+                <li><a href="#" class="nav-link" data-target="about-us">About Us</a></li>
+            </ul>
+            <div class="navbar-search">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="contest-search" placeholder="Search contests, hackathons">
+                </div>
+                <i class="fas fa-bars menu-icon"></i> <!-- For mobile menu if you want to extend -->
+            </div>
+        </nav>
+
+        <!-- Main Content Area (dynamic content based on navigation) -->
+        <main class="content-area">
+
+            <!-- Home Section -->
+            <section id="home" class="page-section active">
+                <div class="dashboard-stats">
+                    <div class="stat-card stat-card-left">
+                        <div class="icon-circle active-contests-icon-bg">
+                            <i class="fas fa-bolt active-contests-icon"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-title">ACTIVE CONTESTS</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-card-right">
+                        <div class="icon-circle upcoming-hackathons-icon-bg">
+                            <i class="fas fa-calendar-alt upcoming-hackathons-icon"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-title">UPCOMING HACKATHONS</span>
+                            <span class="stat-value">2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contest-tabs">
+                    <button class="tab-button active" data-tab="ongoing">Ongoing Contests</button>
+                    <button class="tab-button" data-tab="upcoming">Upcoming Hackathons</button>
+                    <button class="tab-button" data-tab="past-winners">Past Winners</button>
+                    <button class="tab-button" data-tab="team-formation">Team Formation</button>
+                </div>
+
+                <!-- Ongoing Contests Section -->
+                <div id="ongoing" class="contest-grid tab-content active">
+                    <!-- Contest Card 1 -->
+                    <div class="contest-card">
+                        <div class="contest-header">
+                            <span class="contest-title">Code Warriors 2024</span>
+                            <span class="contest-difficulty medium">Medium</span>
+                        </div>
+                        <p class="contest-description">Competitive programming contest with algorithmic challenges</p>
+                        <div class="contest-info">
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> undefined
+                            </div>
+                            <div class="prize">
+                                <i class="fas fa-dollar-sign"></i> $1000
+                            </div>
+                        </div>
+                        <div class="time-remaining" data-end-time="2025-08-25T00:00:00Z">
+                            <h4>Time Remaining</h4>
+                            <div class="countdown">
+                                <div class="time-box days">00<span>Days</span></div>
+                                <div class="time-box hours">00<span>Hours</span></div>
+                                <div class="time-box min">00<span>Min</span></div>
+                                <div class="time-box sec">00<span>Sec</span></div>
+                            </div>
+                        </div>
+                        <div class="technologies">
+                            <h4>Technologies</h4>
+                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                        <div class="contest-actions">
+                            <button class="btn action-button join-contest" data-url="https://unstop.com"><i class="fas fa-plus"></i> Join Contest</button>
+                            <button class="btn action-button details" data-url="https://unstop.com"><i class="fas fa-info-circle"></i> Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Contest Card 2 -->
+                    <div class="contest-card">
+                        <div class="contest-header">
+                            <span class="contest-title">UI/UX Design Challenge</span>
+                            <span class="contest-difficulty easy">Easy</span>
+                        </div>
+                        <p class="contest-description">Create innovative mobile app interfaces</p>
+                        <div class="contest-info">
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> undefined
+                            </div>
+                            <div class="prize">
+                                <i class="fas fa-dollar-sign"></i> $500
+                            </div>
+                        </div>
+                        <div class="time-remaining" data-end-time="2025-09-15T10:00:00Z">
+                            <h4>Time Remaining</h4>
+                            <div class="countdown">
+                                <div class="time-box days">00<span>Days</span></div>
+                                <div class="time-box hours">00<span>Hours</span></div>
+                                <div class="time-box min">00<span>Min</span></div>
+                                <div class="time-box sec">00<span>Sec</span></div>
+                            </div>
+                        </div>
+                        <div class="technologies">
+                            <h4>Technologies</h4>
+                            <span class="tech-tag">Design</span>
+                            <span class="tech-tag">Mobile</span>
+                            <span class="tech-tag">Figma</span>
+                        </div>
+                        <div class="contest-actions">
+                            <button class="btn action-button join-contest" data-url="https://unstop.com"><i class="fas fa-plus"></i> Join Contest</button>
+                            <button class="btn action-button details" data-url="https://unstop.com"><i class="fas fa-info-circle"></i> Details</button>
+                        </div>
+                    </div>
+                    <div class="contest-card">
+                        <div class="contest-header">
+                            <span class="contest-title">Flipkart Grid 2.0</span>
+                            <span class="contest-difficulty easy" style="background-color:#007bff;color: white;">Medium</span>
+                        </div>
+                        <p class="contest-description">Create innovative mobile app interfaces</p>
+                        <div class="contest-info">
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> New,Delhi
+                            </div>
+                            <div class="prize">
+                                <i class="fas fa-dollar-sign"></i> $500
+                            </div>
+                        </div>
+                        <div class="time-remaining" data-end-time="2025-09-15T10:00:00Z">
+                            <h4>Time Remaining</h4>
+                            <div class="countdown">
+                                <div class="time-box days">00<span>Days</span></div>
+                                <div class="time-box hours">00<span>Hours</span></div>
+                                <div class="time-box min">00<span>Min</span></div>
+                                <div class="time-box sec">00<span>Sec</span></div>
+                            </div>
+                        </div>
+                        <div class="technologies">
+                            <h4>Technologies</h4>
+                            <span class="tech-tag">Design</span>
+                            <span class="tech-tag">Mobile</span>
+                            <span class="tech-tag">Figma</span>
+                        </div>
+                        <div class="contest-actions">
+                            <button class="btn action-button join-contest" data-url="https://unstop.com"><i class="fas fa-plus"></i> Join Contest</button>
+                            <button class="btn action-button details" data-url="https://unstop.com"><i class="fas fa-info-circle"></i> Details</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Contest Card 3 -->
+                    <div class="contest-card">
+                        <div class="contest-header">
+                            <span class="contest-title">AI Innovation Quest</span>
+                            <span class="contest-difficulty hard">Hard</span>
+                        </div>
+                        <p class="contest-description">Build AI solutions for real-world problems</p>
+                        <div class="contest-info">
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> undefined
+                            </div>
+                            <div class="prize">
+                                <i class="fas fa-dollar-sign"></i> $2000
+                            </div>
+                        </div>
+                        <div class="time-remaining" data-end-time="2025-10-01T15:30:00Z">
+                            <h4>Time Remaining</h4>
+                            <div class="countdown">
+                                <div class="time-box days">00<span>Days</span></div>
+                                <div class="time-box hours">00<span>Hours</span></div>
+                                <div class="time-box min">00<span>Min</span></div>
+                                <div class="time-box sec">00<span>Sec</span></div>
+                            </div>
+                        </div>
+                        <div class="technologies">
+                            <h4>Technologies</h4>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                        <div class="contest-actions">
+                            <button class="btn action-button join-contest" data-url="https://unstop.com"><i class="fas fa-plus"></i> Join Contest</button>
+                            <button class="btn action-button details" data-url="https://unstop.com"><i class="fas fa-info-circle"></i> Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Hackathons Section (populated with image content) -->
+                <div id="upcoming" class="contest-grid tab-content">
+                    <!-- HackMIT 2024 -->
+                    <div class="contest-card upcoming-card">
+                        <div class="contest-header">
+                            <span class="contest-title">HackMIT 2024</span>
+                            <span class="contest-type national">National</span>
+                        </div>
+                        <p class="contest-description">MIT's premier hackathon bringing together innovators worldwide</p>
+                        <div class="contest-info">
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> Boston, MA
+                            </div>
+                            <div class="prize">
+                                <i class="fas fa-dollar-sign"></i> $50000
+                            </div>
+                        </div>
+                        <div class="event-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span class="detail-label">Event Duration</span>
+                                <span class="detail-value">7/20/2025 - 7/22/2025</span> <!-- Updated to future date -->
+                            </div>
+                            <div class="detail-item time-remaining" data-end-time="2025-07-20T00:00:00Z"> <!-- Updated to future date -->
+                                <i class="fas fa-clock"></i>
+                                <span class="detail-label">Registration Deadline</span>
+                                <div class="countdown">
+                                    <div class="time-box days">00<span>Days</span></div>
+                                    <div class="time-box hours">00<span>Hours</span></div>
+                                    <div class="time-box min">00<span>Min</span></div>
+                                    <div class="time-box sec">00<span>Sec</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="technologies">
+                            <h4>Focus Areas</h4>
+                            <span class="tech-tag green">Web3</span>
+                            <span class="tech-tag green">AI</span>
+                            <span class="tech-tag green">Sustainability</span>
+                        </div>
+                        <div class="contest-actions">
+                            <button class="btn action-button register-now" data-url="https://unstop.com"><i class="fas fa-clipboard-list"></i> Register Now</button>
+                            <button class="btn action-button learn-more" data-url="https://unstop.com"><i class="fas fa-external-link-alt"></i> Learn More</button>
+                        </div>
+                    </div>
+
+                    <!-- TechCrunch Disrupt Hackathon -->
+                    <div class="contest-card upcoming-card">
+                        <div class="contest-header">
+                            <span class="contest-title">TechCrunch Disrupt Hackathon</span>
+                            <span class="contest-type international">International</span>
+                        </div>
+                        <p class="contest-description">48-hour hackathon at the world's leading tech conference</p>
+                        <div class="contest-info">
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i> San Francisco, CA
+                            </div>
+                            <div class="prize">
+                                <i class="fas fa-dollar-sign"></i> $100000
+                            </div>
+                        </div>
+                        <div class="event-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span class="detail-label">Event Duration</span>
+                                <span class="detail-value">8/1/2025 - 8/3/2025</span> <!-- Updated to future date -->
+                            </div>
+                            <div class="detail-item time-remaining" data-end-time="2025-08-01T00:00:00Z"> <!-- Updated to future date -->
+                                <i class="fas fa-clock"></i>
+                                <span class="detail-label">Registration Deadline</span>
+                                <div class="countdown">
+                                    <div class="time-box days">00<span>Days</span></div>
+                                    <div class="time-box hours">00<span>Hours</span></div>
+                                    <div class="time-box min">00<span>Min</span></div>
+                                    <div class="time-box sec">00<span>Sec</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="technologies">
+                            <h4>Focus Areas</h4>
+                            <span class="tech-tag blue">Startup</span>
+                            <span class="tech-tag blue">Innovation</span>
+                            <span class="tech-tag blue">Venture Capital</span>
+                        </div>
+                        <div class="contest-actions">
+                            <button class="btn action-button register-now" data-url="https://unstop.com"><i class="fas fa-clipboard-list"></i> Register Now</button>
+                            <button class="btn action-button learn-more" data-url="https://unstop.com"><i class="fas fa-external-link-alt"></i> Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Winners Section (populated with image content) -->
+                <div id="past-winners" class="tab-content">
+                    <div class="winners-grid">
+                        <div class="winner-card">
+                            <div class="winner-header">
+                                <div class="winner-avatar">
+                                    <img src="https://placehold.co/60x60/cccccc/333333?text=AC" alt="Alex Chen" class="avatar-img"> <!-- Placeholder image -->
+                                </div>
+                                <div class="winner-details">
+                                    <span class="winner-name">Alex Chen</span>
+                                    <span class="winning-position"><i class="fas fa-trophy"></i> 1st Place</span>
+                                </div>
+                            </div>
+                            <p class="winning-contest">Spring Code Marathon</p>
+                            <div class="winning-project">
+                                <strong>Winning Project</strong>
+                                <p>Smart Campus Navigation</p>
+                            </div>
+                            <div class="skills">
+                                <strong>Skills</strong>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                </div>
+                            </div>
+                            <div class="winner-actions">
+                                <button class="btn action-button view-project" data-url="https://unstop.com"><i class="fas fa-external-link-alt"></i> View Project</button>
+                                <button class="btn action-button connect-winner" data-url="https://unstop.com">Connect</button>
+                            </div>
+                        </div>
+                        <div class="winner-card">
+                            <div class="winner-header">
+                                <div class="winner-avatar initial-avatar">SJ</div>
+                                <div class="winner-details">
+                                    <span class="winner-name">Sarah Johnson</span>
+                                    <span class="winning-position winner-badge"><i class="fas fa-award"></i> Winner</span>
+                                </div>
+                            </div>
+                            <p class="winning-contest">Design Innovation Challenge</p>
+                            <div class="winning-project">
+                                <strong>Winning Project</strong>
+                                <p>EcoTracker Mobile App</p>
+                            </div>
+                            <div class="skills">
+                                <strong>Skills</strong>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">UI/UX</span>
+                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">Prototyping</span>
+                                </div>
+                            </div>
+                            <div class="winner-actions">
+                                <button class="btn action-button view-project" data-url="https://unstop.com"><i class="fas fa-external-link-alt"></i> View Project</button>
+                                <button class="btn action-button connect-winner" data-url="https://unstop.com">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Formation Section (initially hidden) -->
+                <div id="team-formation" class="tab-content">
+                    <p style="text-align: center; width: 100%; padding: 50px;">Information about team formation will be available here soon.</p>
+                </div>
+
+            </section>
+
+            <!-- Hackathons Section (displays ongoing contests) -->
+            <section id="hackathons-page" class="page-section">
+                <h2>All Hackathons</h2>
+                <p>Explore all active and upcoming hackathons here.</p>
+                <!-- This will display the content of the "ongoing" tab -->
+                <div id="hackathons-page-content" class="contest-grid">
+                    <!-- Content will be duplicated from #ongoing via JS -->
+                </div>
+            </section>
+
+
+            <!-- Resources Section -->
+            <section id="resources" class="page-section">
+                <h2>Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-item">
+                        <h3>Getting Started</h3>
+                        <p>Learn the basics of competitive programming and design challenges.</p>
+                        <ul>
+                            <li><a href="#">Beginner's Guide to Hackathons</a></li>
+                            <li><a href="#">UI/UX Design Principles</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-item">
+                        <h3>Advanced Topics</h3>
+                        <p>Deep dive into complex algorithms, machine learning, and advanced design tools.</p>
+                        <ul>
+                            <li><a href="#">Mastering Dynamic Programming</a></li>
+                            <li><a href="#">Introduction to TensorFlow</a></li>
+                            <li><a href="#">Figma Advanced Features</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-item">
+                        <h3>Community & Support</h3>
+                        <p>Connect with other participants, mentors, and find support.</p>
+                        <ul>
+                            <li><a href="#">Join our Discord Channel</a></li>
+                            <li><a href="#">Forum Discussions</a></li>
+                            <li><a href="#">FAQ Section</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="about-us" class="page-section">
+                <section   id="about-us" style="background-color: #f4f4f8; padding: 50px 20px; font-family: 'Inter', sans-serif; color: #333;margin-top: 0%;padding: 0%">
+            <div style="max-width: 1000px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; flex-direction: row-reverse;">
+
+    <!-- Image & Personal Intro -->
+    <div style="flex: 1; text-align: center;">
+      <img src="Photos/WhatsApp Image 2025-07-18 at 03.22.46_6f3774e2.jpg" alt="Manvi Sinha" style="width: 200px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+      <h2 style="margin-top: 20px; color: #5e2b97;">Manvi Sinha</h2>
+      <p style="max-width: 300px; margin: auto; font-size: 16px; line-height: 1.5;">
+        I'm the creator of SparkHub, passionate about building innovative and inclusive tech platforms. I believe in empowering students through hands-on learning and collaboration.
+      </p>
+    </div>
+
+    <!-- About SparkHub Text -->
+    <div style="flex: 2;">
+      <h2 style="color: #5e2b97;"><strong>About SparkHub</strong></h2>
+      <p style="font-size: 16px; line-height: 1.6;">
+        SparkHub is a platform dedicated to fostering innovation and creativity through competitive programming contests, design challenges, and hackathons. Our mission is to provide a vibrant community where aspiring developers, designers, and AI enthusiasts can hone their skills, collaborate, and showcase their talents.
+      </p>
+      <p style="font-size: 16px; line-height: 1.6;">
+        We believe in the power of hands-on learning and practical application. Join our community to participate in exciting challenges, learn from experts, and connect with like-minded individuals. Whether you're a seasoned professional or just starting your journey, SparkHub has something for everyone.
+      </p>
+
+      <h3 style="color: #5e2b97; margin-top: 30px;"><strong>Our Vision</strong></h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        To be the leading platform for technical competitions, empowering individuals to solve real-world problems and drive technological advancements.
+      </p>
+
+      <h3 style="color: #5e2b97; margin-top: 30px;"><strong>Contact Us</strong></h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        For inquiries, partnerships, or support, please reach out to us at
+        <a href="mailto:manvisinha4500@gmail.com" style="color: #7c3aed; text-decoration: none;">manvisinha4500@gmail.com</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About SparkHub</h3>
+                    <p style="text-align: justify;">SparkHub is a one-stop platform for students to track their hackathon schedules, view live countdowns, and stay updated with event timelines. It showcases winners and their projects, offering inspiration and learning opportunities. Students can also connect with peers, mentors, and organizers to build their network and grow together</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> New Delhi,India</p>
+                    <p><i class="fas fa-envelope"><a href="mailto:manvisinhan4500@gmail.com"></i> manvisinhan4500@gmail.com</p></a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/manvi-sinha-3131b431b/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/manvisinhha/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section countdown-footer">
+                    <h3>Next Big Event In:</h3>
+                    <div id="footer-countdown" class="countdown">
+                        <div class="time-box days">00<span>Days</span></div>
+                        <div class="time-box hours">00<span>Hours</span></div>
+                        <div class="time-box min">00<span>Min</span></div>
+                        <div class="time-box sec">00<span>Sec</span></div>
+                    </div>
+                    <p class="countdown-event-name">Global Innovation Summit</p>
+                    <p data-end-time="2026-01-01T00:00:00Z" id="footer-countdown-target"></p> <!-- Hidden element for JS to read target time -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SparkHub. All rights reserved.</p>
+                <p>Designed & Developed by Manvi Sinha</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
